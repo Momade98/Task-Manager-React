@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import TaskList from './pages/TaskList';
 import AddTask from './pages/AddTask';
 import TaskDetails from './pages/TaskDetails'
+import TaskModify from './pages/TaskModify';
 
 function App(){
 
@@ -16,6 +17,7 @@ function App(){
         <Route path="/" element={<TaskList />} />
         <Route path="/add" element={<AddTask />} /> 
         <Route path="/task/:id" element={<TaskDetails />} />
+        <Route path="/task/modify/:id" element={<TaskModify />}/>
       </Routes>
     </Router>
   );

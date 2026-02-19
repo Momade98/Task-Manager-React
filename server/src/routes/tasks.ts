@@ -27,6 +27,7 @@ router.post('/', taskValidationRules, (req: Request, res: Response) =>{
         title: req.body.title,
         description: req.body.description,
         completed: false,
+        created_at: new Date(),
     };
 
     tasks.push(task);

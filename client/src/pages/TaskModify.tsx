@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { useParams } from "react-router-dom";
+import './css/TaskModify.css'
   
   
-  function TaskDetails() {
+  function TaskModify() {
     const [task, SetTask] = useState<any>(null);
 
     const { id } = useParams<{id: string}>();
@@ -22,12 +23,11 @@ import { useParams } from "react-router-dom";
   // -----------------
     return (
       <div>
-        <h1>{task.title}</h1>
-        <p>{task.description}</p>
-        <button> Modify </button>
+
+        {/* TODO copy from addtask and continue */}
       </div>
     )
   }
   
-  export default TaskDetails
+  export default TaskModify
   

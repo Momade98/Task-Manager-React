@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import './css/TaskList.css'
 
 interface Task{
@@ -22,7 +23,8 @@ function App() {
       <h1>My Tasks</h1>
       <ul>
         {tasks.map(task => (
-          <li key={task.id}>{task.title}</li>
+          <li key={task.id}><Link to={`/task/${task.id}`}>{task.title}</Link></li>
+        //   <li key={task.id}>{task.title}</li>
         ))}
       </ul>
     </div>
